@@ -24,4 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    
+    NSString *message = [(NSString *)object valueForKey:@"theMessage"];
+    NSLog(@"The message was %@", message);
+}
+
 @end
