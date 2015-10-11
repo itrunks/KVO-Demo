@@ -30,7 +30,8 @@
     NSLog(@"The message was %@", message);
     
     // if implemented in the parent class, it can't hurt to call this:
-    [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    // WILL CAUSE A CRASH IF NOT IMPLEMENTED IN PARENT CLASS
+    // [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
 }
 
 @end
