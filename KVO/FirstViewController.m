@@ -34,10 +34,10 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
-    // make sure to set the value using setProperty
-    // rather than dot notation
-    [self setTheMessage:textField.text];
+    // read out the value of our text field
+    self.theMessage = textField.text;
     
+    // dismiss the keyboard
     [textField resignFirstResponder];
     return YES;
 }
